@@ -1,15 +1,43 @@
 package model;
 
 public class Course {
-	public long c_ID = 0;
-	public String title = "";
-	public int creditPoints = 0;
-	public Professor professor;
+	private long c_ID;
+	private String title;
+	private int credit_points;
+	private Professor professor;
 	
-	public Course(long _c_ID, String _title, String _surname, int _creditPoints, Professor _professor) {
-		c_ID = _c_ID;
-		title = _title;
-		creditPoints = _creditPoints;
-		professor = _professor;
+	private static long counter = 0;
+	
+	public long get_c_ID() {
+		return c_ID;
+	}
+	
+	public String get_title() {
+		return title;
+	}
+	
+	public int get_credit_points() {
+		return credit_points;
+	}
+	
+	public Professor get_professor() {
+		return professor;
+	}
+	
+	public void set_c_ID() {
+		c_ID = counter;
+		counter++;
+	}
+	
+	public void set_title(String title) {
+		this.title = title;
+	}
+	
+	public void set_credit_point(int credit_points) {
+		this.credit_points = credit_points;
+	}
+	
+	public void set_professor(Professor professor) {
+		this.professor = professor;
 	}
 }

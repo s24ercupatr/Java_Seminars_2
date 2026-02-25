@@ -30,7 +30,7 @@ public class Student {
 	}
 	
 	public void set_name(String name) {
-		if (name != null && !name.isEmpty() && name.matches("[A-Z,Ā,Ū,Ī,Ņ,Ē,Š,Ģ,Ķ,Ļ,Ž,Č]{1}[a-z,ā,ū,ī,ņ,ē,š,ģ,ķ,ļ,ž,č]{2,15}([ ]{1}[A-Z,Ā,Ū,Ī,Ņ,Ē,Š,Ģ,Ķ,Ļ,Ž,Č]{1}[a-z,ā,ū,ī,ņ,ē,š,ģ,ķ,ļ,ž,č]{2,15})?")) {
+		if (name != null && !name.isEmpty() && name.matches("[A-ZĀŪĪŅĒŠĢĶĻŽČ]{1}[a-zāūīņēšģķļžč]{2,15}([ ]{1}[A-ZĀŪĪŅĒŠĢĶĻŽČ]{1}[a-zzāūīņēšģķļžč]{2,15})?")) {
 			this.name = name;
 		} else {
 			this.name = "Unknown";
@@ -38,7 +38,7 @@ public class Student {
 	}
 	
 	public void set_surname(String surname) {
-		if (surname != null && !surname.isEmpty() && surname.matches("[A-Z,Ā,Ū,Ī,Ņ,Ē,Š,Ģ,Ķ,Ļ,Ž,Č]{1}[a-z,ā,ū,ī,ņ,ē,š,ģ,ķ,ļ,ž,č]{2,15}([-]{1}[A-Z,Ā,Ū,Ī,Ņ,Ē,Š,Ģ,Ķ,Ļ,Ž,Č]{1}[a-z,ā,ū,ī,ņ,ē,š,ģ,ķ,ļ,ž,č]{2,15})?")) {
+		if (surname != null && !surname.isEmpty() && surname.matches("[A-ZĀŪĪŅĒŠĢĶĻŽČ]{1}[a-zāūīņēšģķļžč]{2,15}([-]{1}[A-ZĀŪĪŅĒŠĢĶĻŽČ]{1}[a-zzāūīņēšģķļžč]{2,15})?")) {
 			this.surname = surname;
 		} else {
 			this.surname = "Unknown";

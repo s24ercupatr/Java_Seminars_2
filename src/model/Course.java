@@ -30,7 +30,11 @@ public class Course {
 	}
 	
 	public void set_title(String title) {
-		this.title = title;
+		if (title != null && !title.isEmpty() && title.matches("[A-ZĀŪĪŅĒŠĢĶĻŽČ][a-z,ā,ū,ī,ņ,ē,š,ģ,ķ,ļ,ž,č]")) {
+			this.title = title;
+		} else {
+			this.title = "Unknown";
+		}
 	}
 	
 	public void set_credit_point(int credit_points) {

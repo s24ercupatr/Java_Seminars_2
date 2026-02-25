@@ -52,4 +52,18 @@ public class Student {
 			this.social_security_nr = "Unknown";
 		}
 	}
+	
+	public Student() {
+		set_st_ID();
+		set_name("Janis");
+		set_surname("Berzins");
+		set_social_security_nr("123456-12345");
+	}
+	
+	public Student(String name, String surname, String social_security_nr) {
+		set_st_ID();
+		set_name(name);
+		set_surname(surname);
+		set_social_security_nr(social_security_nr);
+	}
 }

@@ -30,7 +30,7 @@ public class Student {
 	}
 	
 	public void set_name(String name) {
-		if (this.name != null && !this.name.isEmpty() && this.name.matches("/[A-Z]{1}[a-z]{2,15}([ ]{1}[A-Z]{1}[a-z]{2,15})?/gm")) {
+		if (name != null && !name.isEmpty() && name.matches("[A-Z,Ā,Ū,Ī,Ņ,Ē,Š,Ģ,Ķ,Ļ,Ž,Č]{1}[a-z,ā,ū,ī,ņ,ē,š,ģ,ķ,ļ,ž,č]{2,15}([ ]{1}[A-Z,Ā,Ū,Ī,Ņ,Ē,Š,Ģ,Ķ,Ļ,Ž,Č]{1}[a-z,ā,ū,ī,ņ,ē,š,ģ,ķ,ļ,ž,č]{2,15})?")) {
 			this.name = name;
 		} else {
 			this.name = "Unknown";
@@ -38,7 +38,7 @@ public class Student {
 	}
 	
 	public void set_surname(String surname) {
-		if (this.surname != null && !this.surname.isEmpty() && this.surname.matches("/[A-Z]{1}[a-z]{2,15}([-]{1}[A-Z]{1}[a-z]{2,15})?/gm")) {
+		if (surname != null && !surname.isEmpty() && surname.matches("[A-Z,Ā,Ū,Ī,Ņ,Ē,Š,Ģ,Ķ,Ļ,Ž,Č]{1}[a-z,ā,ū,ī,ņ,ē,š,ģ,ķ,ļ,ž,č]{2,15}([-]{1}[A-Z,Ā,Ū,Ī,Ņ,Ē,Š,Ģ,Ķ,Ļ,Ž,Č]{1}[a-z,ā,ū,ī,ņ,ē,š,ģ,ķ,ļ,ž,č]{2,15})?")) {
 			this.surname = surname;
 		} else {
 			this.surname = "Unknown";
@@ -46,7 +46,7 @@ public class Student {
 	}
 	
 	public void set_social_security_nr(String social_security_nr) {
-		if (this.social_security_nr != null && !this.social_security_nr.isEmpty() && this.social_security_nr.matches("/[0-9]{6}-[0-9]{5}/gm")) {
+		if (social_security_nr != null && !social_security_nr.isEmpty() && social_security_nr.matches("[0-9]{6}-[0-9]{5}")) {
 			this.social_security_nr = social_security_nr;
 		} else {
 			this.social_security_nr = "Unknown";
@@ -67,7 +67,7 @@ public class Student {
 		set_social_security_nr(social_security_nr);
 	}
 	
-	public String to_string() {
+	public String toString() {
 		return st_ID + ": " + name + " " + surname + " (" + social_security_nr + ")";
 	}
 }

@@ -66,4 +66,8 @@ public class Student {
 		set_surname(surname);
 		set_social_security_nr(social_security_nr);
 	}
+	
+	public String to_string() {
+		return st_ID + ": " + name + " " + surname + " (" + social_security_nr + ")";
+	}
 }

@@ -1,5 +1,7 @@
 package model;
 
+import model_enums.ProfDegree;
+
 public class Course {
 	private long c_ID;
 	private String title;
@@ -43,5 +45,23 @@ public class Course {
 	
 	public void set_professor(Professor professor) {
 		this.professor = professor;
+	}
+	
+	public Course() {
+		set_c_ID();
+		set_title("Java programmēšana");
+		set_surname("Berzins");
+		set_degree(ProfDegree.BACHELOR);
+	}
+	
+	public Course(String name, String surname, ProfDegree degree) {
+		set_p_ID();
+		set_name(name);
+		set_surname(surname);
+		set_degree(degree);
+	}
+	
+	public String toString() {
+		return p_ID + ": " + name + " " + surname + ", " + degree;
 	}
 }
